@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+/* DEFINIMOS ESTILOS GENERALES Y VARIABLES */
+:root {
+  /* BRANDING COLORS */
+  --mmo-color-1: #b40b0b;
+  --mmo-color-2: #ee4b4b;
+  --mmo-color-3: #a72727;
+  --mmo-color-4: #e7e7e7;
+  --mmo-color-5: #ea4343;
+  --mmo-color-6: #f40000;
+  --mmo-color-7: #000000;
+  --mmo-color-8: #ffffff;
+  --mmo-color-9: #f1f1f1;
+  --mmo-color-10: #7f7f7f;
+
+  /* FONTS */
+  --mmo-primary-font: 'Noto Sans', sans-serif;
+
+  /* BACKGROUND COLORS */
+  --mmo-primary-bg: var(--mmo-color-9);
+  --mmo-secondary-bg: var(--mmo-color-8);
+  --mmo-tertiary-bg: var(--mmo-color-7);
+
+  /* TEXT COLORS */
+  --mmo-primary-text: var(--mmo-color-7);
+  --mmo-secondary-text: var(--mmo-color-8);
+
+  /* BORDER COLORS */
+
+  /* BORDER RADIUS */
+  --mmo-primary-br: 5px;
+  --mmo-secondary-br: 10px;
+
+  /* SPACINGS */
+  --mmo-margin-xs: 10px;
+  --mmo-margin-s: 20px;
+  --mmo-margin-m: 30px;
+  --mmo-margin-l: 40px;
+  --mmo-margin-xl: 50px;
+
+  --mmo-padding-xs: 10px;
+  --mmo-padding-s: 20px;
+  --mmo-padding-m: 30px;
+  --mmo-padding-l: 40px;
+  --mmo-padding-xl: 50px;
+
+  --mmo-gap-xs: 10px;
+  --mmo-gap-s: 20px;
+  --mmo-gap-m: 30px;
+  --mmo-gap-l: 40px;
+  --mmo-gap-xl: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--mmo-primary-font);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--mmo-gap-m);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--mmo-primary-text);
+}
+
+#header {
+  padding: var(--mmo-padding-m);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--mmo-color-8);
+  z-index: 999999999999;
+}
+
+#header a {
+  font-weight: 500;
+  color: var(--mmo-primary-text);
+}
+
+#header > nav > ul > li:last-child > a {
+  color: #ee4b4b;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* ESTILO HERO */
+#hero {
+  background-image: url(https://littlebuddhaagency.com/wp-content/uploads/branding-agency-blog-coca-cola-brand-architecture-uk-cans.jpg);
+  height: 75svh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  justify-content: start;
+  padding: var(--mmo-padding-xl);
+}
+#hero > h2 {
+  font-size: 60px;
+  color: var(--mmo-color-8);
+  width: 60%;
+  height: 60%;
+  padding: var(--mmo-padding-l);
+}
+
+#hero > article {
+  background-color: var(--mmo-color-4);
+  border-radius: var(--mmo-secondary-br);
+  gap: var(--mmo-gap-xs);
+  padding: var(--mmo-padding-m);
+  position: absolute;
+  top: 200px;
+  right: 200px;
+  width: 40%;
+  max-width: 400px;
+  min-width: 380px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+#hero > article > h3,
+#hero > article > p {
+  color: var(--mmo-color-7);
+  gap: 5px;
+}
+
+#hero > article > p {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.mybutton {
+  background-color: var(--mmo-color-10);
+  padding: var(--mmo-padding-xs);
+  border: none;
+  border-radius: var(--mmo-primary-br);
+  cursor: pointer;
+}
+
+.mybutton:hover {
+  color: var(--mmo-color-2);
+}
+
+/* ESTILO SECTION MARCA*/
+#marca {
+  background-color: var(--mmo-color-9);
+  height: 80svh;
+  padding: var(--mmo-padding-m);
+  position: relative;
+  z-index: -1;
+}
+
+#comunidad {
+  background-color: var(--mmo-color-8);
+  border: 1px solid var(--mmo-color-8);
+  border-radius: var(--mmo-secondary-br);
+  padding: var(--mmo-padding-s);
+  gap: var(--mmo-gap-xs);
+  position: relative;
+  top: -30px;
+  left: 20px;
+  z-index: 1;
+}
+
+#comunidad > button {
+  color: var(--mmo-color-7);
+  background-color: var(--mmo-color-10);
+  padding: var(--mmo-padding-xs);
+  border: none;
+  border-radius: var(--mmo-primary-br);
+  cursor: pointer;
+}
+
+.btnHover:hover {
+  color: var(--mmo-color-2);
+}
+
+#trabajo {
+  background-color: var(--mmo-color-8);
+  border: 1px solid var(--mmo-color-8);
+  border-radius: var(--mmo-secondary-br);
+  padding: var(--mmo-padding-s);
+  gap: var(--mmo-gap-xs);
+  position: relative;
+  top: -90px;
+  left: -10px;
+  z-index: 1;
+}
+
+#trabajo > button {
+  color: var(--mmo-color-7);
+  background-color: var(--mmo-color-10);
+  padding: var(--mmo-padding-xs);
+  border: none;
+  border-radius: var(--mmo-primary-br);
+  cursor: pointer;
+}
+
+.planeta {
+  width: 20%;
+
+  /*box-shadow: 14px 20px -6px rgba(0, 0, 0, 0.75);*/
+}
+
+.planeta > img {
+  height: 450px;
+  width: 450px;
+  border-radius: var(--mmo-secondary-br);
+  position: relative;
+  top: -50px;
+  right: 100px;
+  z-index: 0;
+}
+
+.planeta > h4 {
+  font-size: 20px;
+  padding: var(--mmo-padding-xs);
+}
+
+#comunidad > p {
+  padding: var(--mmo-padding-xs);
+}
+
+#trabajo > p {
+  padding: var(--mmo-padding-xs);
+}
+
+.gente {
+  width: 20%;
+  /*box-shadow: 14px 20px -6px rgba(0, 0, 0, 0.75);*/
+}
+
+.gente > img {
+  height: 400px;
+  width: 450px;
+  border-radius: var(--mmo-secondary-br);
+}
+
+.gente > h4 {
+  font-size: 20px;
+  padding: var(--mmo-padding-xs);
+}
+
+.gente > h4 > p {
+  padding: var(--mmo-padding-s);
+}
+
+/* ESTILO SECTION MARCAS*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin: auto;
+  padding: var(--mmo-padding-m);
+  column-gap: var(--mmo-gap-xl);
+  row-gap: var(--mmo-gap-xl);
+}
+
+.grid-item {
+  width: 60%;
+}
+
+.grid-item > img {
+}
+
+/* ESTILO FOOTER*/
+
+footer {
+  background-color: var(--mmo-color-7);
+}
+
+.final {
+  padding: var(--mmo-padding-l);
+}
+
+.terminos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.terminos > ul > li:first-child {
+  color: var(--mmo-color-1);
+  font-weight: 800;
+}
+
+.terminos > ul > li {
+  color: var(--mmo-color-8);
+}
+.socialmedia > ul {
+  display: flex;
+  justify-content: center;
+  padding: var(--mmo-padding-s);
+}
+
+.socialmedia > ul > li {
+  list-style: none;
+}
+.socialmedia > ul > li > a > img {
+  margin: var(--mmo-margin-s);
+  width: 30px;
+}
+
+.ubicacion {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--mmo-padding-l);
+}
+
+.ubicacion > img {
+  width: 300px;
+}
+
+.cita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--mmo-padding-s);
+  font-size: small;
+}
+
+.cita > p {
+  color: var(--mmo-color-8);
+}
+
+.linea {
+  border-top: 0.5px solid var(--mmo-color-4);
+  height: 5px;
+  max-width: 1300px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    height: 17svh;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .menu {
+    display: flex;
+  }
+  #header > nav {
+    display: none;
+  }
+  #hero > h2 {
+    font-size: 40px;
+  }
+  #hero > article > p {
+    font-size: 20px;
+  }
+  #hero > article {
+    min-width: 300px;
+  }
+}
